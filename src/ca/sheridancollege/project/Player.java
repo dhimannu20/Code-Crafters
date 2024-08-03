@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * A class that models each Player in the game. Players have an identifier, which should be unique.
  * Implements the Factory Method pattern for creating players.
  *
- *  @author Nupur Dhiman,Sahil Bedi ,Labeeque Ahmad ,Kashvi Tewari
+ *  @author Nupur Dhiman,Sahil Bedi ,Labeeque Ahmad ,Kashvi Tewari Code Crafters
  */
 public abstract class Player {
 
