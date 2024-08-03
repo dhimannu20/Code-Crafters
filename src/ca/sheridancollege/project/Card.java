@@ -12,8 +12,6 @@ package ca.sheridancollege.project;
  * @author Nupur Dhiman,Sahil Bedi ,Labeeque Ahmad ,Kashvi Tewari
  */
 public abstract class Card {
-    
     @Override
     public abstract String toString();
 }
-

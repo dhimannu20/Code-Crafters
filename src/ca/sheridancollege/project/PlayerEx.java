@@ -4,49 +4,37 @@
  */
 package ca.sheridancollege.project;
 
-/**
- *
- *  @author Nupur Dhiman,Sahil Bedi ,Labeeque Ahmad ,Kashvi Tewari
- */
 import java.util.ArrayList;
 
+/**
+ * Concrete implementation of the Player class.
+ * Uses Factory Method pattern to create player instances.
+ *
+ *  @author Nupur Dhiman,Sahil Bedi ,Kashvi Tewari
+ */
 public class PlayerEx extends Player {
-
-    private ArrayList<Card> cards; 
 
     public PlayerEx(String name) {
         super(name);
-        
-        cards = new ArrayList<>();
+    }
+
+    public int getDeckSize() {
+        return getCards().size();
+    }
+
+    public Card drawCard() {
+        if (getDeckSize() > 0) {
+            return getCards().remove(0);
+        }
+        return null;
+    }
+
+    public void addCards(ArrayList<Card> cards) {
+        getCards().addAll(cards);
     }
 
     @Override
     public void play() {
-        
-    }
-
-    public ArrayList<Card> getCards() {
-        return cards;
-    }
-
-    public void setCards(ArrayList<Card> cards) {
-        this.cards = cards;
-    }
-
-    public Card drawCard() {
-        if (cards.isEmpty()) {
-            return null;
-        }
-        return cards.remove(0); 
-    }
-
-    public void addCards(ArrayList<Card> wonCards) {
-        cards.addAll(wonCards); 
-    }
-
-    
-
-    public int getDeckSize() {
-        return cards.size();
+        // Game logic specific to PlayerEx
     }
 }
